@@ -1,0 +1,171 @@
+@import 'mixins';
+
+/***
+
+Header 
+
+***/ 
+
+.headerContainer {
+    width: 100%;
+    height: 825px;
+    position: relative;
+
+    .sideElement {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        height: 100vh;
+        width: 40px;
+        z-index: -1;
+    }
+
+    .headerNav {
+        height: 110px;
+        width: 100%;
+        background: #FFF;
+        z-index: -2;
+
+        img {
+            height: 50px;
+            margin: 29px 75px 29px 75px;
+
+            @include md {
+                margin-left: 50px;
+            }
+
+            @include sm {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    .headerCopy {
+        width: 50%;
+        padding: 0 0 0 20%;
+        height: 100%;
+        position: relative;
+
+        @include lg {
+            width: 50%;
+        }
+
+        @include md {
+            width: 100%;
+        }
+
+        .copyContainer {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(10%, -50%);
+            width: 80%;
+            z-index: 3;
+
+            @include lg {
+                width: 85%;
+            }
+
+            @include md {
+                left: 5%;
+                transform: translate(5%, -50%);
+                width: 60%;
+            }
+
+            @include sm {
+                width: 85%;
+            }
+
+            a.seeMore::before {
+                top: 50%;
+            }
+        }
+        
+        h1.display {
+            position: relative;
+        }
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            left: -125px;
+            width: 200px;
+            height: 1px;
+            border-bottom: 1px solid rgb(7, 7, 7);
+        }
+
+        p.altBody {
+            margin: 52px 0 40px 0;
+        }
+
+        .bgText {
+            left: 75px; 
+            bottom: 0;
+        }
+    }
+
+    .accentBox {
+        margin: 110px 0 0 0;
+        height: 100%;
+        width: 40%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #f4f8f9;
+
+        @include lg {
+            width: 50%;
+        }
+
+        @include md {
+            width: 60%;
+        }
+
+
+        .dotIcon {
+            left: -19px;
+            bottom: 150px;
+
+             @include lg {
+                bottom: 50px;
+            }
+
+            @include sm {
+                bottom: 25px;
+            }
+        }
+
+        .socialLinks {
+            position: absolute;
+            right: 75px;
+            bottom: 75px;
+
+            a {
+                font-size: 1.3rem;
+                letter-spacing: .12rem;
+                text-transform: uppercase;
+                color: #787d86;
+                margin: 0 10px 0 0;
+
+                &:hover {
+                    border-bottom: 1.25px solid #787d86;
+                }
+            }
+
+            a:last-of-type {
+                padding: 0;
+            }
+
+            @include md {
+                right: 50px;
+            }
+
+            @include sm {
+                right: 25px;
+                bottom: 25px;
+            }
+        }
+    } 
+}
+

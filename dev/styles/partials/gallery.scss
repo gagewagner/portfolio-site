@@ -1,0 +1,659 @@
+@import 'mixins';
+
+/***
+
+Header 
+
+***/
+
+.galleryContainer {
+    width: 100%;
+    margin: 200px 0;
+
+    @include md {
+        margin: 250px 0;
+    }
+
+    .galleryItem {
+        height: 650px;
+        width: 100%;
+        margin: 0 0 135px 0;
+        position: relative;
+
+        @include md {
+            height: 550px;
+            margin: 0 0 300px 0;
+        }
+
+        @include sm {
+            height: 450px;
+        }
+
+        @include xs {
+            height: 450px;
+        }
+
+        h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 190px;
+            height: 1px;
+            border-bottom: 1px solid rgb(7, 7, 7);
+        }
+    }
+
+    .galleryCopy {
+        width: 450px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        @include lg {
+            width: 400px;
+        }
+
+        @include md {
+            width: 400px;
+        }
+
+        @include sm {
+            width: 350px;
+        }
+
+        @include xs {
+            width: 275px;
+        }
+
+        .techUsed {
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 1.0rem;
+            font-weight: 500;
+            color: #787d86;
+            opacity: .85;
+            letter-spacing: .1rem;
+        }
+
+        .techItem {
+            display: inline-block;
+            padding: 0 10px 0 0;
+        }
+    }
+
+    .galleryImage {
+        height: 100%;
+        background: #f4f8f9;
+        position: relative;
+
+        .projectImage {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 2.5px 10px rgba(0, 0, 0, .1);
+            opacity: .90;
+
+            @include lg {
+                height: 90%;
+            }
+        }
+    }
+
+    .itemOne {
+
+        @include md {
+            margin: 0 0 363px 0;
+        }
+
+        .galleryImage {
+            width: 50%;
+            margin: 0 50% 0 0;
+            
+            @include lg {
+                width: 60%;
+                margin: 0 40% 0 0;
+            }
+
+            @include md {
+                width: 80%;
+                margin: 0 20% 0 0;
+            }
+
+            @include sm {
+                width: 85%;
+                margin: 0 20% 0 0;
+            }
+        }
+
+        .dotIcon {
+            bottom: 75px;
+            right: -19px;
+
+            @include md {
+                bottom: 475px;
+            }
+
+            @include sm {
+                display: none;
+            }
+        }
+
+        .verticalElement {
+            z-index: 3;
+            top: 32px;
+            right: auto;
+            left: -7.5px;
+
+            img {
+                width: 32px;
+                height: 1px;
+                margin: 0 7px 3.75px 5px;
+            }
+
+            @include md {
+                left: auto;
+                top: 92px;
+                right: -122px;
+            }
+
+        }
+
+        .galleryCopy {
+            left: 70%;
+            transform: translate(-70%,-50%);
+
+            @include lg {
+                left: 90%;
+                transform: translate(-90%,-50%);
+            }
+
+            @include md {
+                top: 188.5%;
+                transform: translate(-90%,-175%);
+            }
+
+            @include sm {
+                top: 209%;
+                transform: translate(-90%,-175%);
+            }
+
+            @include xs {
+                top: 227%;
+                transform: translate(-90%,-175%);
+            }
+        }
+
+        h3::after {
+            bottom: -25px;
+            left: -125px;
+        }
+
+        p.mainBody {
+            margin: 52px 0 15px 65px;
+
+            @include sm {
+                margin: 52px 0 15px 32.5px;
+            }
+        }
+        
+        .techUsed {
+            padding: 0 0 40px 65px;
+
+            @include sm {
+                padding: 0 0 40px 32.5px;
+            }
+        }
+
+        .techItem {
+            display: inline-block;
+            padding: 0 10px 10px 0;
+        }
+
+        a.seeMore:first-of-type {
+            margin: 0 50px 0 65px;
+
+            @include sm {
+                margin: 0 50px 0 32.5px;
+            }
+        }
+    }
+
+    .itemTwo,
+    .itemFour {
+
+        @include md {
+            margin: 0 0 364px 0;
+        }
+
+        .galleryImage {
+            width: 30%;
+            margin: 0 15% 0 0;
+            float: right;
+
+            @include lg {
+                width: 40%;
+                margin: 0 10% 0 0;
+            }
+
+            @include md {
+                width: 65%;
+            }
+
+            @include sm {
+                width: 75%;
+                margin: 0 0 0 25%;
+            }
+
+            @include xs {
+                width: 80%;
+                margin: 0 0 0 20%;
+            }
+        }
+
+        .verticalElement {
+            bottom: 89px;
+            right: -124px;
+
+            img {
+                width: 32px;
+                height: 1px;
+                margin: 0 7px 3.5px 5px;
+            }
+
+            @include sm {
+                top: 93px;
+                bottom: auto;
+                left: -126px;
+                right: auto;
+            }
+        }
+
+        .crosshair {
+            height: 41px;
+            position: absolute;
+            left: -41px;
+            bottom: -41px;
+            transition: .25s ease;
+
+            @include md {
+                bottom: auto;
+                top: -41px;
+            }
+
+            @include sm {
+                display: none;
+            }
+        }
+
+        .crosshair:hover {
+            transform: rotate(45deg);
+        }
+        
+        .galleryCopy {
+            left: 40%;
+            transform: translate(-40%,-50%);
+
+            @include lg {
+                left: 15%;
+                transform: translate(-15%,-50%);
+            }
+
+             @include md {
+                top: 170%;
+                left: 20%;
+                transform: translate(-20%,-140%);
+            }
+
+            @include sm {
+                top: 185%;
+            }
+
+            @include xs {
+                left: 25%;
+                top: 193%;
+            }
+        }
+
+        h3::after {
+            bottom: -25px;
+            left: auto;
+            right: -25px;
+
+            @include sm {
+                right: 0;
+            }
+        }
+
+        p.mainBody {
+            margin: 52px 0 15px 0px;
+        }
+
+        .techUsed {
+            padding: 0 0 40px 0;
+        }
+
+        .techItem {
+            display: inline-block;
+            padding: 0 10px 10px 0;
+        }
+
+        a.seeMore {
+            margin: 0 50px 0 0px;
+        }
+    }
+
+
+    .itemThree {
+
+        @include md {
+            margin: 0 0 337px 0;
+        }
+        
+        .galleryImage {
+            width: 50%;
+            margin: 0 15px 0 15%;
+            float: left;
+            position: relative;
+
+            @include lg {
+                width: 60%;
+                margin-left: 10%;
+            }
+
+            @include md {
+                width: 70%;
+            }
+
+            @include md {
+                width: 75%;
+                float: none;
+                margin: 0 auto;
+            }
+        }
+
+        .galleryImage::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 250px;
+                height: 650px;
+                width: 15px;
+                background: #FFF;
+
+                @include lg {
+                    right: 200px;
+                }
+
+                @include md {
+                    right: 150px;
+                }
+
+                @include sm {
+                    content: none;
+                }
+            }
+
+        .verticalElement {
+            top: 110px;
+            left: -142px;
+
+            img {
+                width: 32px;
+                height: 1px;
+                margin: 0 7px 3.75px 5px;
+            }
+
+            @include sm {
+                left: auto;
+                right: -141px;
+            }
+
+            @include xs {
+                right: -135px;
+            }
+        }
+
+        .galleryCopy {
+            top: 95%;
+            left: 80%;
+            transform: translate(-80%,-95%);
+
+            @include lg {
+                left: 90%;
+                transform: translate(-90%,-95%);
+            }
+
+            @include md {
+                top: 168%;
+                transform: translate(-90%,-150%);
+            }
+
+            @include md {
+                top: 183%;
+                transform: translate(-90%,-150%);
+            }
+
+            @include xs {
+                top: 192%;
+                left: 95%;
+                transform: translate(-95%,-150%);
+            }
+        }
+
+        h3::after {
+            bottom: -25px;
+            left: -125px;
+        }
+
+        p.mainBody {
+            margin: 52px 0 15px 65px;
+
+            @include sm {
+                margin: 52px 0 15px 32.5px;
+            }
+        }
+
+        .techUsed {
+            padding: 0 0 40px 65px;
+            
+            @include sm {
+                padding: 0 0 40px 32.5px;
+            }
+        }
+
+        .techItem {
+            display: inline-block;
+            padding: 0 10px 10px 0;
+        }
+
+        a.seeMore:first-of-type {
+            margin: 0 50px 0 65px;
+
+            @include sm {
+                margin: 0 50px 32.5px;
+            }
+        }
+
+        a.seeMore::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -25px;
+            width: 50px;
+            border-bottom: 1px solid rgb(7, 7, 7);
+            transform: translateY(-47%);
+            transition: .25s ease;
+        }
+
+        a.seeMore:hover::before {
+            left: 0;
+        }
+    }
+
+    .itemFour {
+
+        @include md {
+            margin: 0 0 290px 0;
+        }
+        @include md {
+            margin: 0 0 317px 0;
+        }
+        .galleryImage {
+            .verticalElement {
+                bottom: 82px;
+
+                @include sm {
+                    bottom: auto;
+                    right: auto;
+                    top: 86px;
+                    left: -106px;
+                }
+            }
+        }
+
+        .galleryCopy {
+             @include md {
+                top: 151%;
+                transform: translate(-20%,-140%);
+            }
+
+             @include sm {
+                top: 170%;
+                transform: translate(-20%,-140%);
+            }
+        }
+    }
+
+    .itemFive {
+
+        @include md {
+            margin: 0 0 345px 0;
+        }
+
+        @include md {
+            margin: 0 0 368px 0;
+        }
+
+        .galleryImage {
+            width: 55%;
+            margin: 0 0 0 15%;
+
+            @include lg {
+                width: 60%;
+            }
+
+            @include md {
+                width: 70%;
+                margin: 0 0 0 10%;
+            }
+
+            @include sm {
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            @include xs {
+                width: 80%;
+            }
+        }
+
+        .dotIcon {
+            bottom: 75px;
+            right: -19px;
+        }
+
+        .verticalElement {
+            z-index: 3;
+            top: 65px;
+            right: auto;
+            left: -96px;
+
+            img {
+                width: 32px;
+                height: 1px;
+                margin: 0 7px 3.75px 5px;
+            }
+
+            @include sm {
+                top: 67px;
+                left: auto;
+                right: -98px;
+            }
+
+            @include xs {
+                top: 65px;
+                right: -83px;
+            }
+        }
+
+        .galleryCopy {
+            left: 90%;
+            transform: translate(-90%,-50%);
+
+            @include lg {
+                left: 90%;
+                transform: translate(-90%,-50%);
+            }
+
+            @include md {
+                top: 150%;
+                transform: translate(-90%,-110%);
+            }
+
+            @include sm {
+                top: 168%;
+                transform: translate(-90%,-110%);
+            }
+        }
+
+
+        h3::after {
+            content: none;
+        }
+
+        h3:last-of-type::after {
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            left: -125px;
+            width: 190px;
+            height: 1px;
+            border-bottom: 1px solid rgb(7, 7, 7);
+        }
+
+        p.mainBody {
+            margin: 52px 0 15px 65px;
+
+            @include sm {
+                margin: 52px 0 15px 32.5px;
+            }
+        }
+
+        .techUsed {
+            padding: 0 0 40px 65px;
+
+            @include sm {
+                padding: 0 0 40px 32.5px;
+            }
+        }
+
+        .techItem {
+            display: inline-block;
+            padding: 0 10px 10px 0;
+        }
+
+        a.seeMore:first-of-type {
+            margin: 0 50px 0 65px;
+
+            @include sm {
+                margin: 0 50px 0 32.5px;
+            }
+        }
+    }
+}

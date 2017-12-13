@@ -1,0 +1,180 @@
+@import 'mixins';
+
+/***
+
+Footer 
+
+***/
+
+.footerContainer {
+    width: 100%;
+    position: relative;
+    padding: 160px 0 280px 0;
+
+    @include md {
+        padding: 160px 0 180px 0;
+    }
+
+    .contactForm {
+        width: 60%;
+        float: left;
+
+        @include md {
+            width: 100%;
+            float: none;
+        }
+
+        h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 190px;
+            height: 1px;
+            border-bottom: 1px solid rgb(7, 7, 7);
+            bottom: -25px;
+            left: -125px;
+        }
+    
+        p.mainBody {
+            margin: 52px 0 40px 0;
+            width: 80%;
+        }
+
+        .inputWrapper {
+            width: 48%;
+            float: left;
+            margin: 0 0 80px 0;
+            position: relative;
+        }
+
+        .inputWrapper:first-of-type {
+            margin-right: 4%;
+        }
+
+        .textWrapper {
+            position: relative;
+            display: inline-block;
+
+            textarea {
+                position: relative;
+                padding: 0 0 10px 0;
+            }
+
+            .areaDots {
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                bottom: 2px;
+                right: 0;
+                background: url(../images/text-dots.svg);
+                pointer-events: none;
+                z-index: 2;
+            }
+        }
+
+        .formSubmit {
+            font-size: 1.2rem;
+            letter-spacing: .12rem;
+            text-transform: uppercase;
+            border: none;
+            color: #FFF;
+            background: rgb(7, 7, 7);
+            text-align: center;
+            padding: 18px 43.5px;
+            height: 50px;
+            width: 140px;
+            border-radius: 0;
+            float: right;
+            margin: 30px 0 0 100%;
+            transition: .25s ease;
+        }
+
+        .formSubmit:hover,
+        .formSubmit:active {
+            background: #787d86;
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 50px;
+            left: 15%;
+            text-transform: uppercase;
+            font-size: 1.0rem;
+            letter-spacing: .1rem;
+            color: #787d86;
+
+            @include sm {
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .contactInfo {
+        width: 40%;
+        float: left;
+
+        a:hover {
+            border-bottom: 1.25px solid #787d86;
+        }
+
+        @include md {
+            width: 100%;
+            float: none;
+        }
+
+        .contactList {
+            height: 380px;
+            padding: 102px 0 0 0;
+        }
+
+        .contactItem {
+            height: 33.33%;
+            padding: 0 0 0 130px;
+
+            @include lg {
+                padding: 0 0 0 65px;
+            }
+
+            @include md {
+                text-align: center;
+                padding: 0;
+                width: 33.33%;
+                float: left;
+            }
+
+            @include sm {
+                width: 100%;
+                float: none;
+            }
+        }
+
+        h4 {
+            text-transform: uppercase;
+            letter-spacing: .16rem;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: .1rem;
+        }
+    }
+
+    .accentBox {
+        height: 100%;
+        width: 47.5%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #f4f8f9;
+        z-index: -1;
+
+        @include md {
+            width: 60%;
+        }
+    }
+}
