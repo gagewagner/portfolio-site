@@ -104,6 +104,14 @@ Footer
             letter-spacing: .1rem;
             color: #787d86;
 
+            @include lg {
+                left: 10%;
+            }
+
+            @include lg {
+                left: 7.5%;
+            }
+
             @include sm {
                 left: 0;
                 width: 100%;

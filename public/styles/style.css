@@ -143,7 +143,11 @@ Universal Styles
 ***/
 html {
   font-size: 62.5%;
-  color: #070707; }
+  color: #070707;
+  max-width: 100%; }
+
+body {
+  width: 100vw; }
 
 .wrapper {
   width: 70%;
@@ -1071,6 +1075,12 @@ Footer
       font-size: 1.0rem;
       letter-spacing: .1rem;
       color: #787d86; }
+      @media (max-width: 1024px) {
+        .footerContainer .contactForm .copyright {
+          left: 10%; } }
+      @media (max-width: 1024px) {
+        .footerContainer .contactForm .copyright {
+          left: 7.5%; } }
       @media (max-width: 480px) {
         .footerContainer .contactForm .copyright {
           left: 0;
@@ -1206,6 +1216,12 @@ Footer
       font-size: 1.0rem;
       letter-spacing: .1rem;
       color: #787d86; }
+      @media (max-width: 1024px) {
+        .footerContainer .contactForm .copyright {
+          left: 10%; } }
+      @media (max-width: 1024px) {
+        .footerContainer .contactForm .copyright {
+          left: 7.5%; } }
       @media (max-width: 480px) {
         .footerContainer .contactForm .copyright {
           left: 0;
@@ -2043,7 +2059,11 @@ Universal Styles
 ***/
 html {
   font-size: 62.5%;
-  color: #070707; }
+  color: #070707;
+  max-width: 100%; }
+
+body {
+  width: 100vw; }
 
 .wrapper {
   width: 70%;
