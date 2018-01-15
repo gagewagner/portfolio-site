@@ -506,13 +506,14 @@ Header
         }
         .galleryImage {
             .verticalElement {
-                bottom: 82px;
+                bottom: 115px;
+                right: -150px;
 
                 @include sm {
                     bottom: auto;
                     right: auto;
-                    top: 86px;
-                    left: -106px;
+                    top: 120px;
+                    left: -150px;
                 }
             }
         }
@@ -524,7 +525,7 @@ Header
             }
 
              @include sm {
-                top: 170%;
+                top: 177%;
                 transform: translate(-20%,-140%);
             }
         }
